@@ -31,7 +31,7 @@
             </dd>
 
             <dt class="col-sm-3">@lang('about.technologies')</dt>
-            <dd class="col-sm-9">Laravel<br/>jQuery<br/>Bootstrap<br/>Materialize<br/>APIs<br/>MySQL<br/>UNIX<br/>Nginx</dd>
+            <dd class="col-sm-9">Laravel<br/>Git<br/>jQuery<br/>Bootstrap<br/>Materialize<br/>APIs<br/>MySQL<br/>UNIX<br/>Nginx</dd>
 
             <dt class="col-sm-3 text-truncate">@lang('about.favorite_tools')</dt>
             <dd class="col-sm-9">aHrefs<br/>Excel<br/>Illustrator<br/>Photoshop<br/>Adobe XD<br/>Google Search Console<br/>Google Analytics</dd>

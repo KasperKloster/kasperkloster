@@ -1,0 +1,183 @@
+@import 'variables';
+@import 'general';
+
+/* Topbar */
+#topbar {
+  z-index: 1;
+}
+#topbar .dropdown{
+  opacity: 0.7;
+}
+
+/* Menu */
+#subpage-menu{
+  position: fixed;
+  left: -80px;
+  top: 600px;
+}
+
+#subpage-menu-btn {
+  background: $white;
+  border-radius: 50%;
+  box-shadow: 0 0 4px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  height: 200px;
+  width: 200px;
+}
+
+#subpage-menu-btn:hover{
+  color: $black-font;
+  box-shadow: 0 0 0 15px rgba(240, 240, 240, 0.2)!important;
+  transition: all 0.3s;
+}
+
+#subpage-menu i {
+  text-shadow: 0px -1px 1px #bdb5b4, 1px 1px 1px white;
+}
+
+#subpage-menu-btn i {
+  position: absolute;
+  top: 50px;
+  left: 110px;
+}
+
+#subpage-menu ul {
+  list-style-type: none;
+}
+
+#subpage-menu ul li {
+  background-color: $white;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 85px;
+  color: #2B2B2B;
+}
+
+#subpage-menu ul a:hover li{
+  transform: scale(0.9);
+  color: $black-font;
+  box-shadow: 0 0 0 15px rgba(240, 240, 240, 0.2)!important;
+}
+
+.closed ul li
+{
+  position: absolute;
+  left: 110px;
+  top: 50px;
+  z-index: -100;
+  transition: all 0.3s;
+}
+
+.active > ul > a:nth-child(1) li{
+  position: absolute;
+  left: 110px;
+  top: -100px;
+  transition: all 0.3s;
+}
+
+.active > ul > a:nth-child(2) li{
+  position: absolute;
+  left: 230px;
+  top: -10px;
+  transition: all 0.6s;
+}
+
+/* About */
+.blurred-bg{
+  transition: all 0.1s;
+  filter: blur(1px);
+}
+
+#credits {
+  position: absolute;
+  bottom: -800px;
+}
+
+#credits dl{
+  color: $white;
+}
+
+#credits h1 {
+  font-family: $header-font;
+  font-size: 70pt;
+  font-weight: 900;
+  text-transform: capitalize;
+  display: block;
+  color: $white;
+  text-align: center;
+}
+
+/* Work */
+#work-sidebar {
+  position: fixed;
+  top: 36vh;
+  right: 0px;
+  background-color: $white;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  height: 170px;
+  width: 35px;
+  line-height: 40px;
+  opacity: 0.7;
+  transition: all .5s;
+}
+
+#work-sidebar:hover{
+  opacity: 0.9;
+}
+
+#work-sidebar a {
+  color: $black;
+}
+
+#work-sidebar ul {
+  position: absolute;
+  right: 10px;
+}
+
+.tooltip-inner {
+  font-family: $header-font;
+  background: $white;
+  color: #3c3c3c;
+  text-align: left;
+  margin: 10px;
+}
+
+.bs-tooltip-left .arrow::before, .bs-tooltip-auto[x-placement^="left"] .arrow::before {
+  border-left-color: $white !important;
+  margin-left: -10px!important;
+}
+
+.work-section{
+  padding-top: 45px;
+  min-height: 60vh;
+}
+
+.work-section h1, h2 {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $white;
+}
+
+.work-section p, dt, dd {
+  color: $white-sec;
+}
+
+#first {
+  background-color: #0F0E14;
+  color: $white;
+}
+
+#second {
+  background-color: #CA53B2;
+}
+
+#third {
+  background-color: #AD4ABD;
+}
+
+#fourth {
+  background-color: #2A3366;
+}

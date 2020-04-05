@@ -1,0 +1,17 @@
+body{
+  background-color: $black;
+}
+
+p {
+  font-family: $body-font;
+  color: $white-sec;
+}
+
+ul {
+  font-family: $header-font;
+  list-style-type: none;
+}
+
+h1, h2 {
+  font-family: $header-font;
+}

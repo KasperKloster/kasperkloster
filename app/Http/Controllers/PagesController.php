@@ -8,17 +8,23 @@ use App;
 
 class PagesController extends Controller
 {
-    public function getIndex($locale)
-    {      
-      App::setLocale($locale);
-      session()->put('locale', $locale);
+    public function getIndex($locale = null)
+    {
+      if($locale == 'en')
+      {
+        App::setLocale('en');
+        session()->put('locale', 'en');
+      }
+      else {
+        App::setLocale('da');
+        session()->put('locale', 'da');
+      }
+
       return view('pages.index');
     }
 
-    public function getAbout($locale)
+    public function getAbout()
     {
-      App::setLocale($locale);
-      session()->put('locale', $locale);
       return view('pages.about');
     }
 

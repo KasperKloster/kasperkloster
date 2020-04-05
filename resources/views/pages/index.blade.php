@@ -1,8 +1,11 @@
 @extends('layouts.main')
-
+@php $locale = session()->get('locale'); @endphp
 @push('seo')
   <title>Kasper Kloster</title>
   <meta description="Kasper Kloster - Webudvikler med expertise i SEO. PHP, MySQL, JavaScript, Grafisk Design">
+  @if($locale == 'da')
+  <link rel="canonical" href="{{ route('index') }}" />
+  @endif
 @endpush
 
 @push('stylesheets')
@@ -17,7 +20,6 @@
         <div class="d-flex flex-column">
           <nav class="front-navbar">
             <ul>
-                @php $locale = session()->get('locale'); @endphp
                 @if($locale == 'en')
                 <li><a href="{{ route('about', 'en') }}" class="item"><i class="fas fa-brain fa-2x"></i></a></li>
                 <li><a href="{{ route('work', 'en') }}" class="item"><i class="fas fa-paint-brush fa-2x"></i></a></li>

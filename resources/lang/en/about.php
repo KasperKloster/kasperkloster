@@ -7,6 +7,6 @@ return [
     'skills'         => 'Skills',
     'languages'      => 'Languages',
     'technologies'   => 'Technologies',
-    'favorite_tools' => 'Favorite Tools'
+    'favorite_tools' => 'Favorite Tools',
     'special_thanks' => 'Special Thanks'
 ];

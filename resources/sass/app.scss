@@ -13,7 +13,7 @@
 #subpage-menu{
   position: fixed;
   left: -80px;
-  top: 600px;
+  bottom: -100px;
 }
 
 #subpage-menu-btn {
@@ -93,6 +93,12 @@
 #credits {
   position: absolute;
   bottom: -800px;
+
+}
+
+.abs-left{
+  position: relative;
+  left: 35%;
 }
 
 #credits dl{

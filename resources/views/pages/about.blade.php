@@ -7,51 +7,45 @@
 
 @section('content')
 <main>
+
   <section id="credits">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-7 offset-sm-5">
-          <dl class="row">
-            <dt class="col-sm-3">@lang('about.made_by')</dt>
-            <dd class="col-sm-9">Kasper Kloster</dd>
+    <div class="abs-left">
+      <dl class="row">
+              <dt class="col-sm-3">@lang('about.made_by')</dt>
+              <dd class="col-sm-9">Kasper Kloster</dd>
 
-            <dt class="col-sm-3">@lang('about.contact')</dt>
-            <dd class="col-sm-9">
-              <p>Kasperkloster@gmail.com</p>
-            </dd>
+              <dt class="col-sm-3">@lang('about.contact')</dt>
+              <dd class="col-sm-9">
+                <p>Kasperkloster@gmail.com</p>
+              </dd>
 
-            <dt class="col-sm-3">@lang('about.skills')</dt>
-            <dd class="col-sm-9">
-              <p>Coding<br/>SEO<br/>Webdesign<br/>Graphic Design<br/>Online Marketing</p>
-            </dd>
+              <dt class="col-sm-3">@lang('about.skills')</dt>
+              <dd class="col-sm-9">
+                <p>Coding<br/>SEO<br/>Webdesign<br/>Graphic Design<br/>Online Marketing</p>
+              </dd>
 
-            <dt class="col-sm-3">@lang('about.languages')</dt>
-            <dd class="col-sm-9">
-              <p>PHP<br/>JavaScript<br/>HTML<br/>CSS<br/>SQL<br/>Python</p>
-            </dd>
+              <dt class="col-sm-3">@lang('about.languages')</dt>
+              <dd class="col-sm-9">
+                <p>PHP<br/>JavaScript<br/>HTML<br/>CSS<br/>SQL<br/>Python</p>
+              </dd>
 
-            <dt class="col-sm-3">@lang('about.technologies')</dt>
-            <dd class="col-sm-9">Laravel<br/>Git<br/>jQuery<br/>Bootstrap<br/>Materialize<br/>APIs<br/>MySQL<br/>UNIX<br/>Nginx</dd>
+              <dt class="col-sm-3">@lang('about.technologies')</dt>
+              <dd class="col-sm-9">Laravel<br/>Git<br/>jQuery<br/>Bootstrap<br/>Materialize<br/>APIs<br/>MySQL<br/>UNIX<br/>Nginx</dd>
 
-            <dt class="col-sm-3 text-truncate">@lang('about.favorite_tools')</dt>
-            <dd class="col-sm-9">aHrefs<br/>Excel<br/>Illustrator<br/>Photoshop<br/>Adobe XD<br/>Google Search Console<br/>Google Analytics<br/>Google Tag Manager</dd>
+              <dt class="col-sm-3 text-truncate">@lang('about.favorite_tools')</dt>
+              <dd class="col-sm-9">aHrefs<br/>Excel<br/>Illustrator<br/>Photoshop<br/>Adobe XD<br/>Google Search Console<br/>Google Analytics<br/>Google Tag Manager</dd>
 
-            <dt class="col-sm-3">@lang('about.special_thanks')</dt>
-            <dd class="col-sm-9">
-              <dl class="row">
-                <dd class="col-sm-8">Google</dd>
-              </dl>
-            </dd>
-          </dl>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-8 offset-sm-3">
-          <h1>Kasper Kloster</h1>
-        </div>
-      </div>
+              <dt class="col-sm-3">@lang('about.special_thanks')</dt>
+              <dd class="col-sm-9">
+                <dl class="row">
+                  <dd class="col-sm-8">Google</dd>
+                </dl>
+              </dd>
+            </dl>
     </div>
+    <h1>Kasper Kloster</h1>
   </section>
+
 </main>
 
 <!-- Nav -->
@@ -79,6 +73,8 @@
     @endif
   </ul>
 </nav>
+
+</main>
 @stop
 
 @push('scripts')

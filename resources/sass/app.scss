@@ -93,7 +93,6 @@
 #credits {
   position: absolute;
   bottom: -800px;
-
 }
 
 .abs-left{
@@ -113,6 +112,7 @@
   display: block;
   color: $white;
   text-align: center;
+  text-shadow: 0px -2px 1px #bdb5b4, 1px 1px 1px $black-font;
 }
 
 /* Work */
@@ -165,6 +165,7 @@
   font-weight: 700;
   text-transform: uppercase;
   color: $white;
+  font-size: 35pt;
 }
 
 .work-section p, dt, dd {

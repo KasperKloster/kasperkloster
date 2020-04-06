@@ -79,7 +79,7 @@
         <article>
           <div class="row">
             <div class="col-md-4 offset-md-1">
-              INDHOLD GER
+              
             </div>
             <div class="col-md-7">
               <div class="text-center">

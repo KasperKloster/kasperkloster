@@ -52,8 +52,7 @@
           <div class="row">
             <div class="col-md-7 offset-md-1">
               <div class="text-center">
-                <h2>Bandmate</h2>
-                <a href="https://bandmate.dk" target="_blank" rel="noopener">Bandmate.dk</a>
+                <h2><a href="https://bandmate.dk" target="_blank" rel="noopener">Bandmate</a></h2>
               </div>
               <p>
                 @lang('work.bandmate_desc')
@@ -79,12 +78,13 @@
         <article>
           <div class="row">
             <div class="col-md-4 offset-md-1">
-              
+
             </div>
             <div class="col-md-7">
               <div class="text-center">
-                <h2>Travelround</h2>
-                <a href="https://travelround.io" target="_blank" rel="noopener">Travelround.io</a>
+                <h2>
+                  <a href="https://travelround.io" target="_blank" rel="noopener">Travelround</a>
+                </h2>
               </div>
               <p>
                 @lang('work.travel_desc')
@@ -107,8 +107,7 @@
         <div class="row">
           <div class="col-md-7 offset-md-1">
             <div class="text-center">
-              <h2>OnlineMind</h2>
-              <a href="https://onlinemind.dk" target="_blank" rel="noopener">Onlinemind.dk</a>
+              <h2><a href="https://onlinemind.dk" target="_blank" rel="noopener">OnlineMind</a></h2>              
             </div>
             <p>
               @lang('work.onlinemind_desc')

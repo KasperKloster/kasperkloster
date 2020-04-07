@@ -3,9 +3,6 @@
 @push('seo')
   <title>Kasper Kloster</title>
   <meta description="Kasper Kloster - Webudvikler med expertise i SEO. PHP, MySQL, JavaScript, Grafisk Design">
-  @if($locale == 'da')
-  <link rel="canonical" href="{{ route('index') }}" />
-  @endif
 @endpush
 
 @push('stylesheets')
@@ -20,13 +17,8 @@
         <div class="d-flex flex-column">
           <nav class="front-navbar">
             <ul>
-                @if($locale == 'en')
-                <li><a href="{{ route('about', 'en') }}" class="item"><i class="fas fa-brain fa-2x"></i></a></li>
-                <li><a href="{{ route('work', 'en') }}" class="item"><i class="fas fa-paint-brush fa-2x"></i></a></li>
-                @else
-                  <li><a href="{{ route('about', 'da') }}" class="item"><i class="fas fa-brain fa-2x"></i></a></li>
-                  <li><a href="{{ route('work', 'da') }}" class="item"><i class="fas fa-paint-brush fa-2x"></i></a></li>
-                @endif
+              <li><a href="{{ route('about', $locale) }}" class="item"><i class="fas fa-brain fa-2x"></i></a></li>
+              <li><a href="{{ route('work', $locale) }}" class="item"><i class="fas fa-paint-brush fa-2x"></i></a></li>
               <li><h1>Kasper<br/>Kloster</h1></li>
               <li><a href="#" id="findMe" class="item">@lang('index.find_me')</a></li>
               <li>
@@ -47,7 +39,7 @@
 @endsection
 
 @push('scripts')
-<script>
+<script nonce="{{ csp_nonce() }}">
   $("h1").click(function(){
     // Open and Closes main
     $(".front-navbar").toggleClass("front-navbar-click");

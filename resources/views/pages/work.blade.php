@@ -107,7 +107,7 @@
         <div class="row">
           <div class="col-md-7 offset-md-1">
             <div class="text-center">
-              <h2><a href="https://onlinemind.dk" target="_blank" rel="noopener">OnlineMind</a></h2>              
+              <h2><a href="https://onlinemind.dk" target="_blank" rel="noopener">OnlineMind</a></h2>
             </div>
             <p>
               @lang('work.onlinemind_desc')
@@ -135,28 +135,19 @@
     </div>
     @php $locale = session()->get('locale'); @endphp
     <ul>
-      @if($locale == 'en')
-      <a href="{{ route('index', 'en') }}">
+      <a href="{{ route('index', $locale) }}">
         <li><i class="fas fa-home fa-2x"></i></li>
       </a>
-      <a href="{{ route('about', 'en') }}">
+      <a href="{{ route('about', $locale) }}">
         <li><i class="fas fa-brain fa-2x"></i></li>
       </a>
-      @else
-        <a href="{{ route('index', 'da') }}">
-          <li><i class="fas fa-home fa-2x"></i></li>
-        </a>
-        <a href="{{ route('about', 'da') }}">
-          <li><i class="fas fa-brain fa-2x"></i></li>
-        </a>
-      @endif
     </ul>
   </nav>
 </main>
 @stop
 
 @push('scripts')
-<script>
+<script nonce="{{ csp_nonce() }}">
 $(document).ready(function(){
   // Menu
   $("#subpage-menu-btn").click(function() {

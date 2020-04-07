@@ -10,28 +10,16 @@ class PagesController extends Controller
 {
     public function getIndex($locale = null)
     {
-      if($locale == 'en')
-      {
-        App::setLocale('en');
-        session()->put('locale', 'en');
-      }
-      else {
-        App::setLocale('da');
-        session()->put('locale', 'da');
-      }
-
       return view('pages.index');
     }
 
-    public function getAbout()
+    public function getAbout($locale)
     {
       return view('pages.about');
     }
 
     public function getWork($locale)
     {
-      App::setLocale($locale);
-      session()->put('locale', $locale);
       return view('pages.work');
     }
 }

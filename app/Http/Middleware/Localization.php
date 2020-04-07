@@ -16,9 +16,28 @@ class Localization
      */
      public function handle($request, Closure $next)
      {
-       if (session()->has('locale')) {
-           App::setLocale(session()->get('locale'));
+       // Getting URL Parameters.
+       if(!in_array($request->route('lang'), ['da', 'en']))
+       {
+         // Setting default lang
+         $locale = 'da';
+         // Setting locale
+         App::setLocale($locale);
+         session()->put('locale', $locale);
+         return redirect()->route($request->route()->getName(), $locale);
        }
+       else
+       {
+         $locale = $request->route('lang');
+       }
+       // Setting locale
+       App::setLocale($locale);
+       session()->put('locale', $locale);
+
+       // if (session()->has('locale')) {
+       //     App::setLocale(session()->get('locale'));
+       // }
+
        return $next($request);
      }
 }

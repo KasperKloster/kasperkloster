@@ -55,22 +55,12 @@
   </div>
   <ul>
     @php $locale = session()->get('locale'); @endphp
-
-    @if($locale == 'en')
-      <a href="{{ route('index', 'en')}}">
-        <li><i class="fas fa-home fa-2x"></i></li>
-      </a>
-      <a href="{{ route('work', 'en') }}">
-        <li><i class="fas fa-paint-brush fa-2x"></i></li>
-      </a>
-    @else
-      <a href="{{ route('index', 'da')}}">
-        <li><i class="fas fa-home fa-2x"></i></li>
-      </a>
-      <a href="{{ route('work', 'da') }}">
-        <li><i class="fas fa-paint-brush fa-2x"></i></li>
-      </a>
-    @endif
+    <a href="{{ route('index', $locale)}}">
+      <li><i class="fas fa-home fa-2x"></i></li>
+    </a>
+    <a href="{{ route('work', $locale) }}">
+      <li><i class="fas fa-paint-brush fa-2x"></i></li>
+    </a>
   </ul>
 </nav>
 
@@ -78,11 +68,11 @@
 @stop
 
 @push('scripts')
-<script>
+<script nonce="{{ csp_nonce() }}">
   $(document).ready(function(){
-    $("body").addClass("overflow-hidden");
+    $('body').addClass("overflow-hidden").hide().fadeIn(3600);
     // Start animation
-    $("#credits").animate({ "top": "-800px" }, 25000, 'linear' );
+    $("#credits").animate({ "top": "-900px" }, 26000, 'linear' );
     // Pause, and Play animation
     $("#subpage-menu-btn").click(function() {
       if($("#subpage-menu").hasClass("closed"))
@@ -99,7 +89,7 @@
       {
         $("#subpage-menu").removeClass("active").addClass("closed");
         $(this).find("i").removeClass("fa-play").addClass("fa-pause");
-        $("#credits").animate({ "top": "-550px" }, 10000 );
+        $("#credits").animate({ "top": "-900px" }, 26000, 'linear' );
         $("#credits").removeClass("blurred-bg");
       }
     });

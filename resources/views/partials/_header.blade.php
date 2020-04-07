@@ -17,6 +17,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Titillium+Web:wght@300;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{ mix('/css/app.css') }}" media="all">
     @stack('stylesheets')
+
+    <script type="application/ld+json" nonce="{{ csp_nonce() }}">
+    {
+      "@context": "http://schema.org/",
+      "@type": "Person",
+      "name": "Kasper Kloster",
+      "email": "mailto:kasperkloster@gmail.com",
+      "jobTitle": "Developer",
+      "url": "https://kasperkloster.dk",
+      "sameAs": [
+        "https://dk.linkedin.com/in/kasperkloster",
+        "https://github.com/kasperkloster",
+        "https://www.behance.net/kasperkloster",
+        "https://www.instagram.com/kasperkloster/",
+        "https://twitter.com/kasperkloster"
+      ]
+    }
+    </script>
   </head>
 
   <body>

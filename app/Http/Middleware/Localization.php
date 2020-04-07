@@ -15,7 +15,7 @@ class Localization
      * @return mixed
      */
      public function handle($request, Closure $next)
-     {
+     {       
        // Getting URL Parameters.
        if(!in_array($request->route('lang'), ['da', 'en']))
        {

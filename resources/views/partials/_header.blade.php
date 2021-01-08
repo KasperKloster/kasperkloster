@@ -12,7 +12,7 @@
     <link rel="alternate" href="{{ route(Route::currentRouteName(), 'en')}}" hreflang="x-default" />
     @stack('seo')
     <link rel="stylesheet" type="text/css" href="{{ mix('/css/app.css') }}" media="all">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/fontawesome.min.css" integrity="sha512-IejtbqJqhyw0pAfIGrqsO/+9McIyWp3zwz9Y0oKOpsSo9XHOCWwPcS6ezTpdDG5ZIkmMdvkkd1eq7C56fRqYxg==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css" integrity="sha512-IejtbqJqhyw0pAfIGrqsO/+9McIyWp3zwz9Y0oKOpsSo9XHOCWwPcS6ezTpdDG5ZIkmMdvkkd1eq7C56fRqYxg==" crossorigin="anonymous" />
     @stack('stylesheets')
 
     <script type="application/ld+json" nonce="{{ csp_nonce() }}">

@@ -26,9 +26,9 @@ class SpatieCspExtended  extends Basic
 
   public function addFontDirectives()
   {
-    return $this 
-    ->addDirective(Directive::STYLE, 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/')
-    ->addDirective(Directive::FONT, 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/')
+    return $this
+    ->addDirective(Directive::STYLE, 'https://use.fontawesome.com/')
+    ->addDirective(Directive::FONT, 'https://use.fontawesome.com/')    
     ->addDirective(Directive::STYLE, 'https://fonts.googleapis.com/')
     ->addDirective(Directive::FONT, 'http://fonts.gstatic.com/');
   }

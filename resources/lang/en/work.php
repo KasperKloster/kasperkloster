@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'work'                => 'Work',
+    'work'                => 'Online Projects',
     'technologies_used'   => 'Technologies Used',
     'language'            => 'Languages',
     'lead'                => 'Some of my previous projects and work.',

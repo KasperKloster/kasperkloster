@@ -2,197 +2,132 @@
 
 @push('seo')
   <title>@lang('work.work') | Kasper Kloster</title>
-  <meta description="Kasper Kloster - Webudvikler med expertise i SEO. PHP, MySQL, JavaScript, Grafisk Design">
+  <meta description="@lang('index.meta_desc')"/>
 @endpush
 
 @section('content')
-<main>
-  <div id="content">
-    <aside id="work-sidebar">
-      <nav>
-        <ul>
-          <a href="#first" class="smooth-scroll">
-            <li data-toggle="tooltip" data-placement="left" title="Top">
-                <i class="fas fa-dot-circle"></i>
-            </li>
-          </a>
-          <a href="#second" class="smooth-scroll">
-            <li data-toggle="tooltip" data-placement="left" title="Bandmate">
-                <i class="fas fa-dot-circle"></i>
-            </li>
-          </a>
-          <a href="#third" class="smooth-scroll">
-            <li data-toggle="tooltip" data-placement="left" title="Travelround">
-                <i class="fas fa-dot-circle"></i>
-            </li>
-          </a>
-          <a href="#fourth" class="smooth-scroll">
-            <li data-toggle="tooltip" data-placement="left" title="OnlineMind">
-                <i class="fas fa-dot-circle"></i>
-            </li>
-          </a>
-        </ul>
-      </nav>
-    </aside>
-    <section id="first" class="work-section">
-      <div class="container">
-        <article>
-          <div class="col-md-10 offset-md-1">
-            <h1>@lang('work.work')</h1>
-            <p class="lead">
-              @lang('work.lead')
-            </p>
-          </div>
-        </article>
-      </div>
-    </section>
-    <section id="second" class="work-section">
-      <div class="container">
-        <article>
-          <div class="row">
-            <div class="col-md-7 offset-md-1">
-              <div class="text-center">
-                <h2><a href="https://bandmate.dk" target="_blank" rel="noopener">Bandmate</a></h2>
-              </div>
-              <p>
-                @lang('work.bandmate_desc')
-              </p>
-              <dl class="row">
-                <dt class="col-sm-3">@lang('work.language')</dt>
-                <dd class="col-sm-9">PHP, HTML, CSS, Blade, Schema</dd>
-              </dl>
-              <dl class="row">
-                <dt class="col-sm-3">@lang('work.technologies_used')</dt>
-                <dd class="col-sm-9">Laravel, Materialzecss, Ticketmaster API.</dd>
-              </dl>
-            </div>
+<main id="main" class="h-auto bg-primaryBlack-900">
+  <section id="top" class="bg-gray-800 h-auto py-4 px-36">
+    <header class="text-center">
+      <h1 class="text-4xl text-gray-100 uppercase font-titillium font-bold">
+        @lang('work.work')
+      </h1>
+      <p class="text-gray-100">@lang('work.lead')</p>
+    </header>
+  </section>
 
-            <div class="col-md-4">
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-    <section id="third" class="work-section mb-3 mt-3">
-      <div class="container">
-        <article>
-          <div class="row">
-            <div class="col-md-4 offset-md-1">
+  <section id="bandmate" class="bg-pink-500 work-section">
+    <article>
+    <h2><a href="https://bandmate.dk" target="_blank" rel="noopener">Bandmate</a></h2>
+    <p class="mb-2">@lang('work.bandmate_desc')</p>
+    <dl class="flex flex-wrap">
+      <dt class="w-full md:w-1/6 font-bold">Type</dt>
+      <dd class="w-full md:w-5/6 ml-auto">Website</dd>
+    </dl>
+    <dl class="flex flex-wrap">
+      <dt class="w-full md:w-1/6 font-bold">@lang('work.language')</dt>
+      <dd class="w-full md:w-5/6 ml-auto">PHP, HTML, CSS, Blade, Schema</dd>
+    </dl>
+    <dl class="flex flex-wrap">
+      <dt class="w-full md:w-1/6 font-bold">@lang('work.technologies_used')</dt>
+      <dd class="w-full md:w-5/6 ml-auto">Laravel, Materialzecss, Ticketmaster API.</dd>
+    </dl>
+    <dl class="flex flex-wrap">
+      <dt class="w-full md:w-1/6 font-bold">URL</dt>
+      <dd class="w-full md:w-5/6 ml-auto">
+        <a class="text-blue-700 hover:text-blue-900" href="https://bandmate.dk" target="_blank" rel="noopener">
+         https://bandmate.dk
+       </a>
+     </dd>
+    </dl>
+    </article>
+  </section>
 
-            </div>
-            <div class="col-md-7">
-              <div class="text-center">
-                <h2>
-                  <a href="https://travelround.io" target="_blank" rel="noopener">Travelround</a>
-                </h2>
-              </div>
-              <p>
-                @lang('work.travel_desc')
-              </p>
-              <dl class="row">
-                <dt class="col-sm-3">@lang('work.language')</dt>
-                <dd class="col-sm-9">PHP, HTML, CSS, Blade, JavaScript, MySQL</dd>
-              </dl>
-              <dl class="row">
-                <dt class="col-sm-3">@lang('work.technologies_used')</dt>
-                <dd class="col-sm-9">Laravel, Bootstrap, jQuery, Mapbox, APIs, Google AdSense</dd>
-              </dl>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-    <section id="fourth" class="work-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-7 offset-md-1">
-            <div class="text-center">
-              <h2><a href="https://onlinemind.dk" target="_blank" rel="noopener">OnlineMind</a></h2>
-            </div>
-            <p>
-              @lang('work.onlinemind_desc')
-            </p>
-            <dl class="row">
-              <dt class="col-sm-3">@lang('work.language')</dt>
-              <dd class="col-sm-9">PHP, HTML, CSS, Blade, JavaScript</dd>
-            </dl>
-            <dl class="row">
-              <dt class="col-sm-3">@lang('work.technologies_used')</dt>
-              <dd class="col-sm-9">Laravel, Bootstrap, jQuery, Mailchimp, Mailgun</dd>
-            </dl>
-          </div>
+  <section id="travelound" class="bg-green-500 work-section">
+    <article>
+    <h2><a href="https://travelround.io" target="_blank" rel="noopener">Travelround</a></h2>
+    <p class="mb-2">@lang('work.travel_desc')</p>
+    <dl class="flex flex-wrap">
+      <dt class="w-full md:w-1/6 font-bold">Type</dt>
+      <dd class="w-full md:w-5/6 ml-auto">Website</dd>
+    </dl>
+    <dl class="flex flex-wrap">
+      <dt class="w-full md:w-1/6 font-bold">@lang('work.language')</dt>
+      <dd class="w-full md:w-5/6 ml-auto">PHP, HTML, CSS, Blade, JavaScript, MySQL</dd>
+    </dl>
+    <dl class="flex flex-wrap">
+      <dt class="w-full md:w-1/6 font-bold">@lang('work.technologies_used')</dt>
+      <dd class="w-full md:w-5/6 ml-auto">Laravel, Bootstrap, jQuery, Ajax, Mapbox, Rome2Rio API, Google AdSense</dd>
+    </dl>
+    <dl class="flex flex-wrap">
+      <dt class="w-full md:w-1/6 font-bold">URL</dt>
+      <dd class="w-full md:w-5/6 ml-auto">
+        <a class="text-blue-700 hover:text-blue-900" href="https://travelround.io" target="_blank" rel="noopener">
+         https://travelround.io
+       </a>
+     </dd>
+    </dl>
+    </article>
+  </section>
 
-          <div class="col-md-4">
-          </div>
-        </div>
-        </article>
-      </div>
-    </section>
-  </div>
-  <nav id="subpage-menu" class="closed">
-    <div id="subpage-menu-btn">
-      <i class="fas fa-bars fa-2x"></i>
-    </div>
-    @php $locale = session()->get('locale'); @endphp
-    <ul>
-      <a href="{{ route('index', $locale) }}">
-        <li><i class="fas fa-home fa-2x"></i></li>
+  <section id="onlinemind" class="bg-purple-500 work-section">
+    <article>
+    <h2><a href="https://onlinemind.dk" target="_blank" rel="noopener">OnlineMind</a></h2>
+    <p class="mb-2">@lang('work.onlinemind_desc')</p>
+    <dl class="flex flex-wrap">
+      <dt class="w-full md:w-1/6 font-bold">Type</dt>
+      <dd class="w-full md:w-5/6 ml-auto">Website</dd>
+    </dl>
+    <dl class="flex flex-wrap">
+      <dt class="w-full md:w-1/6 font-bold">@lang('work.language')</dt>
+      <dd class="w-full md:w-5/6 ml-auto">PHP, HTML, CSS, Blade, JavaScript</dd>
+    </dl>
+    <dl class="flex flex-wrap">
+      <dt class="w-full md:w-1/6 font-bold">@lang('work.technologies_used')</dt>
+      <dd class="w-full md:w-5/6 ml-auto">Laravel, Bootstrap, jQuery, Mailchimp, Mailgun</dd>
+    </dl>
+    <dl class="flex flex-wrap">
+      <dt class="w-full md:w-1/6 font-bold">URL</dt>
+      <dd class="w-full md:w-5/6 ml-auto">
+        <a class="text-blue-700 hover:text-blue-900" href="https://onlinemind.dk" target="_blank" rel="noopener">
+         https://onlinemind.dk
+       </a>
+     </dd>
+    </dl>
+    </article>
+  </section>
+
+  <section id="funktdesign" class="bg-yellow-500 work-section">
+    <article>
+    <h2><a href="https://funktdesign.eu" target="_blank" rel="noopener">FunktDesign</a></h2>
+    <p class="mb-2"></p>
+    <dl class="flex flex-wrap">
+      <dt class="w-full md:w-1/6 font-bold">Type</dt>
+      <dd class="w-full md:w-5/6 ml-auto">Website</dd>
+    </dl>
+    <dl class="flex flex-wrap">
+      <dt class="w-full md:w-1/6 font-bold">@lang('work.language')</dt>
+      <dd class="w-full md:w-5/6 ml-auto">PHP, HTML, CSS, MySQL, JavaScript</dd>
+    </dl>
+    <dl class="flex flex-wrap">
+      <dt class="w-full md:w-1/6 font-bold">@lang('work.technologies_used')</dt>
+      <dd class="w-full md:w-5/6 ml-auto">Laravel, Bootstrap, jQuery, Ajax, Stripe Api, Mailgun</dd>
+    </dl>
+    <dl class="flex flex-wrap">
+      <dt class="w-full md:w-1/6 font-bold">URL</dt>
+      <dd class="w-full md:w-5/6 ml-auto">
+        <a class="text-blue-700 hover:text-blue-900" href="https://funktdesign.eu" target="_blank" rel="noopener">
+         https://funktdesign.eu
+       </a>
+       /
+       <a class="text-blue-700 hover:text-blue-900" href="https://funktdesign.dk" target="_blank" rel="noopener">
+        https://funktdesign.dk
       </a>
-      <a href="{{ route('about', $locale) }}">
-        <li><i class="fas fa-brain fa-2x"></i></li>
-      </a>
-    </ul>
-  </nav>
+     </dd>
+    </dl>
+    </article>
+  </section>
 </main>
+
+@include('partials._playNavbar', ['page' => 'work'])
 @stop
-
-@push('scripts')
-<script nonce="{{ csp_nonce() }}">
-$(document).ready(function(){
-  // Menu
-  $("#subpage-menu-btn").click(function() {
-    if($("#subpage-menu").hasClass("closed"))
-    {
-      $("#subpage-menu").removeClass("closed").addClass("active");
-      // Replace Icon
-      $(this).find("i").removeClass("fa-bars").addClass("fa-times");
-      // Blur
-      $("#content").addClass("blurred-bg");
-    }
-    else
-    {
-      $("#subpage-menu").removeClass("active").addClass("closed");
-      $(this).find("i").removeClass("fa-times").addClass("fa-bars");
-      $("#content").removeClass("blurred-bg");
-    }
-  });
-
-  // Tooltip
-  $(function () {
-    $('[data-toggle="tooltip"]').tooltip();
-  });
-
-  // Smooth scroll
-  $(".smooth-scroll").click(function(event) {
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
-
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function(){
-
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-  });
-});
-</script>
-@endpush

@@ -1,58 +1,58 @@
 @extends('layouts.main')
-@php $locale = session()->get('locale'); @endphp
 @push('seo')
   <title>Kasper Kloster</title>
-  <meta description="Kasper Kloster - Webudvikler med expertise i SEO. PHP, MySQL, JavaScript, Grafisk Design">
-@endpush
-
-@push('stylesheets')
-    <link rel="stylesheet" type="text/css" href="{{ mix('/css/front.css') }}" media="all">
+  <meta description="@lang('index.meta_desc')"/>
 @endpush
 
 @section('content')
-<main>
-  <section class="h-100">
-    <header class="container h-100">
-      <div class="d-flex align-items-center justify-content-center h-100">
-        <div class="d-flex flex-column">
-          <nav class="front-navbar">
+<main class="h-screen flex items-center justify-center bg-primaryWhite-100">
+  <section>
+    <header>
+      <div class="relative min-h-400 min-w-4/5 md:min-w-420 flex flex-wrap content-center">
+        <h1 id="frontH1" class="m-auto z-10 font-titillium font-black text-7xl md:text-9xl text-primaryBlack-900 frontH1Shadow cursor-pointer transition duration-500 ease-in-out">
+          Kasper<br/>Kloster
+        </h1>
+          <nav id="frontNav">
             <ul>
-              <li><a href="{{ route('about', $locale) }}" class="item"><i class="fas fa-brain fa-2x"></i></a></li>
-              <li><a href="{{ route('work', $locale) }}" class="item"><i class="fas fa-paint-brush fa-2x"></i></a></li>
-              <li><h1>Kasper<br/>Kloster</h1></li>
-              <li><a href="#" id="findMe" class="item">@lang('index.find_me')</a></li>
-              <li>
-                <ul id="findMeSub">
-                  <a href="https://dk.linkedin.com/in/kasperkloster" target="_blank" rel="noopener"><li><i class="fab fa-linkedin-in fa-2x"></i></li></a>
-                  <a href="https://github.com/kasperkloster" target="_blank" rel="noopener"><li><i class="fab fa-github fa-2x"></i></li></a>
-                  <a href="https://www.behance.net/user/?username=kasperkloster" target="_blank" rel="noopener"><li><i class="fab fa-behance fa-2x"></i></li></a>
-                  <a href="https://onlinemind.dk" target="_blank" rel="noopener"><li><i class="fas fa-globe fa-2x"></i></li></a>
+              <li class="absolute transform opacity-0 top-45p left-30p transition-all duration-500 ease-in-out">
+                <a href="{{ route('about', Session::get('locale')) }}" class="front-btn">
+                  <i class="fas fa-brain fa-2x"></i>
+                </a>
+              </li>
+              <li class="absolute transform opacity-0 top-45p right-47p transition-all duration-500 ease-in-out">
+                <a href="{{ route('work', Session::get('locale')) }}" class="front-btn"><i class="fas fa-paint-brush fa-2x"></i></a>
+              </li>
+              <li class="absolute transform opacity-0 bottom-30p left-30p transition-all duration-500 ease-in-out">
+                <button id="socialBtn" class="front-btn relative z-10"><i class="fas fa-hashtag fa-2x"></i></button>
+
+                <ul id="socialList" class="absolute z-0 top-0 left-30p mr-4 flex items-center opacity-0 transition-all duration-500 ease-in-out">
+                  <li>
+                    <a href="https://dk.linkedin.com/in/kasperkloster" target="_blank" rel="noopener" class="front-social-btn">
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/kasperkloster" target="_blank" rel="noopener" class="front-social-btn">
+                      <i class="fab fa-github"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.behance.net/user/?username=kasperkloster" target="_blank" rel="noopener" class="front-social-btn">
+                      <i class="fab fa-behance"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://onlinemind.dk/" target="_blank" rel="noopener" class="front-social-btn">
+                      <i class="fas fa-globe-europe"></i>
+                    </a>
+                  </li>
                 </ul>
+
               </li>
             </ul>
           </nav>
-        </div>
       </div>
     </header>
   </section>
 </main>
 @endsection
-
-@push('scripts')
-<script nonce="{{ csp_nonce() }}">
-  $("h1").click(function(){
-    // Open and Closes main
-    $(".front-navbar").toggleClass("front-navbar-click");
-    // If findMe Menu is open
-    if($("#findMeSub").hasClass("show-sub"))
-    {
-      $("#findMeSub").toggleClass("show-sub");
-    }
-    // Find Me Menu
-    $("#findMe").click(function(event){
-      event.preventDefault();
-      $("#findMeSub").toggleClass("show-sub");
-    });
-  });
-</script>
-@endpush

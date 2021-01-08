@@ -2,49 +2,53 @@
 
 @push('seo')
   <title>@lang('about.about') | Kasper Kloster</title>
-  <meta description="Kasper Kloster - Webudvikler med expertise i SEO. PHP, MySQL, JavaScript, Grafisk Design">
+  <meta description="@lang('index.meta_desc')"/>
 @endpush
 
 @section('content')
-<main>
+<main id="main" class="relative h-screen overflow-hidden bg-primaryBlack-900 text-gray-100">
+  <div id="credits" class="absolute left-24 md:left-38">
 
-  <section id="credits">
-    <div class="abs-left">
-      <dl class="row">
-              <dt class="col-sm-3">@lang('about.made_by')</dt>
-              <dd class="col-sm-9">Kasper Kloster</dd>
+    <header class="mb-6 text-center">
+      <h1 class="font-bold">Created by</h1>
+      <p><i>Kasper Kloster</i></p>
+    </header>
 
-              <dt class="col-sm-3">@lang('about.contact')</dt>
-              <dd class="col-sm-9">
-                <p>Kasperkloster@gmail.com</p>
-              </dd>
+    <section class="relative text-center md:text-justify">
 
-              <dt class="col-sm-3">@lang('about.skills')</dt>
-              <dd class="col-sm-9">
-                <p>Coding<br/>SEO<br/>Webdesign<br/>Graphic Design<br/>Online Marketing</p>
-              </dd>
+      <article>
+        <dl class="flex flex-wrap mb-6">
+          <dt class="w-full md:w-1/2 font-bold">@lang('about.contact')</dt>
+          <dd class="w-full md:w-1/2 ml-auto">kasperkloster@gmail.com</dd>
+        </dl>
+        <dl class="flex flex-wrap mb-6">
+          <dt class="w-full md:w-1/2 font-bold">@lang('about.skills')</dt>
+          <dd class="w-full md:w-1/2 ml-auto">Coding<br/>SEO<br/>Webdesign<br/>Graphic Design<br/>Online Marketing</dd>
+        </dl>
+        <dl class="flex flex-wrap mb-6">
+          <dt class="w-full md:w-1/2 font-bold">@lang('about.languages')</dt>
+          <dd class="w-full md:w-1/2 ml-auto">PHP<br/>JavaScript<br/>HTML<br/>CSS<br/>MySQL<br/>Python</dd>
+        </dl>
+        <dl class="flex flex-wrap mb-6">
+          <dt class="w-full md:w-1/2 font-bold">@lang('about.technologies')</dt>
+          <dd class="w-full md:w-1/2 ml-auto">Laravel<br/>Git<br/>jQuery<br/>Tailwind<br/>Bootstrap<br/>Materialize<br/>APIs<br/>MySQL<br/>UNIX<br/>Nginx</dd>
+        </dl>
+        <dl class="flex flex-wrap mb-6">
+          <dt class="w-full md:w-1/2 font-bold">@lang('about.favorite_tools')</dt>
+          <dd class="w-full md:w-1/2 ml-auto">aHrefs<br/>Excel<br/>Illustrator<br/>Photoshop<br/>Adobe XD<br/>Google Search Console<br/>Google Analytics<br/>Google Tag Manager</dd>
+        </dl>
+        <dl class="flex flex-wrap mb-6">
+          <dt class="w-full md:w-1/2 font-bold">@lang('about.special_thanks')</dt>
+          <dd class="w-full md:w-1/2 ml-auto">Google</dd>
+        </dl>
+      </article>
+    </section>
+  </div>
+</main>
+@include('partials._playNavbar', ['page' => 'about'])
+@stop
 
-              <dt class="col-sm-3">@lang('about.languages')</dt>
-              <dd class="col-sm-9">
-                <p>PHP<br/>JavaScript<br/>HTML<br/>CSS<br/>SQL<br/>Python</p>
-              </dd>
-
-              <dt class="col-sm-3">@lang('about.technologies')</dt>
-              <dd class="col-sm-9">Laravel<br/>Git<br/>jQuery<br/>Bootstrap<br/>Materialize<br/>APIs<br/>MySQL<br/>UNIX<br/>Nginx</dd>
-
-              <dt class="col-sm-3 text-truncate">@lang('about.favorite_tools')</dt>
-              <dd class="col-sm-9">aHrefs<br/>Excel<br/>Illustrator<br/>Photoshop<br/>Adobe XD<br/>Google Search Console<br/>Google Analytics<br/>Google Tag Manager</dd>
-
-              <dt class="col-sm-3">@lang('about.special_thanks')</dt>
-              <dd class="col-sm-9">
-                <dl class="row">
-                  <dd class="col-sm-8">Google</dd>
-                </dl>
-              </dd>
-            </dl>
-    </div>
-    <h1>Kasper Kloster</h1>
-  </section>
+{{--
 
 </main>
 
@@ -95,4 +99,4 @@
     });
   });
 </script>
-@endpush
+@endpush --}}

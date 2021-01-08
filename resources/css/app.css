@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@700;900&display=swap');
+
+/* ./resources/css/app.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer utilities {
+  .frontH1Shadow {
+    text-shadow: 0 -2px 1px #bdb5b4,1px 1px 1px #fff;
+  }
+
+  #playNavbar {
+    left: -80px;
+    bottom: -100px;
+    box-shadow: 0 0 4px 5px rgba(0,0,0,.2);
+  }
+
+  .playNavbar-active
+  {
+    box-shadow: 0 0 0 15px hsla(0,0%,94.1%,.2)!important;
+  }
+
+  #playNavbar:hover {
+    box-shadow: 0 0 0 15px hsla(0,0%,94.1%,.2)!important;
+  }
+
+  #playNavbar svg {
+    top: 40px;
+    left: 100px;
+  }
+
+  #playNavbar > ul > a:hover {
+    box-shadow: 0 0 0 15px hsla(0,0%,94.1%,.2)!important;
+  }
+
+  .bg-blurred {
+    transition: all .1s;
+    -webkit-filter: blur(1px);
+    filter: blur(1px);
+  }
+
+
+}
+
+.front-btn{
+  @apply rounded-full bg-primaryWhite-50 h-20 w-20 md:h-24 md:w-24 flex items-center justify-center shadow-md hover:no-underline hover:shadow-inner hover:text-primaryBlack-900 transition duration-300 ease-in-out
+}
+
+.front-social-btn{
+  @apply rounded-full bg-primaryWhite-50 h-16 w-16 mr-4 flex items-center justify-center shadow-md hover:no-underline hover:shadow-inner hover:text-primaryBlack-900 transition duration-300 ease-in-out
+}
+
+.work-section {
+  @apply h-full md:h-52 mt-6 py-6 px-36 md:px-52 text-gray-100
+}
+
+.work-section h2 {
+  @apply text-4xl text-gray-200 uppercase font-titillium font-bold hover:text-gray-100 transition duration-300 ease-in-out
+}
+
+.playNavbar-item{
+  @apply fixed flex items-center justify-center z-40 shadow-md bg-primaryWhite-100 text-primaryBlack-900 rounded-full h-20 w-20 hover:scale-75 hover:shadow-inner transform-gpu transition-all duration-500 ease-in-out
+}

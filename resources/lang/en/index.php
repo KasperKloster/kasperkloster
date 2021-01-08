@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'find_me'       => 'find me'
+    'meta_desc'       => 'Kasper Kloster - Web developer with expertise i SEO, PHP, MySQL, JavaScript, Graphic Design',
 ];

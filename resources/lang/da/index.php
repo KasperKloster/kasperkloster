@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'find_me'       => 'find mig'
+    'meta_desc'       => 'Kasper Kloster - Webudvikler med expertise i SEO, PHP, MySQL, JavaScript, Grafisk Design',
 ];

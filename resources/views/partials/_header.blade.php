@@ -3,7 +3,7 @@
   <head>
     @include('partials._google')
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     @if(Session::get('locale') == 'en')
       <link rel="alternate" hreflang="da_DK" href="{{ route(Route::currentRouteName(), 'da')}}" />
     @else
@@ -11,8 +11,8 @@
     @endif
     <link rel="alternate" href="{{ route(Route::currentRouteName(), 'en')}}" hreflang="x-default" />
     @stack('seo')
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{{ mix('/css/app.css') }}" media="all">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/fontawesome.min.css" integrity="sha512-IejtbqJqhyw0pAfIGrqsO/+9McIyWp3zwz9Y0oKOpsSo9XHOCWwPcS6ezTpdDG5ZIkmMdvkkd1eq7C56fRqYxg==" crossorigin="anonymous" />
     @stack('stylesheets')
 
     <script type="application/ld+json" nonce="{{ csp_nonce() }}">

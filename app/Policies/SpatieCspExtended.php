@@ -26,9 +26,9 @@ class SpatieCspExtended  extends Basic
 
   public function addFontDirectives()
   {
-    return $this
-    ->addDirective(Directive::STYLE, 'https://use.fontawesome.com/')
-    ->addDirective(Directive::FONT, 'https://use.fontawesome.com/')
+    return $this 
+    ->addDirective(Directive::STYLE, 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/')
+    ->addDirective(Directive::FONT, 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/')
     ->addDirective(Directive::STYLE, 'https://fonts.googleapis.com/')
     ->addDirective(Directive::FONT, 'http://fonts.gstatic.com/');
   }
@@ -38,7 +38,7 @@ class SpatieCspExtended  extends Basic
       return $this
         ->addDirective(Directive::SCRIPT, 'https://www.googletagmanager.com/')
         ->addDirective(Directive::CONNECT, 'https://www.google-analytics.com/')
-        ->addDirective(Directive::IMG, 'https://www.google-analytics.com/');
+        ->addDirective(Directive::IMG, 'https://www.google-analytics.com/')
+        ->addDirective(Directive::CONNECT, 'https://stats.g.doubleclick.net');
   }
-
 }
